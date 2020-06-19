@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">Notizbuch</a>
+
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Bearbeiten
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="edit/edit.html">Anzeigen</a>
+                </li>
+            </ul>
+            <!-- Links -->
+
+            <form class="form-inline">
+                <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+        </div>
+        <!-- Collapsible content -->
+
+    </nav>
+    <!--/.Navbar-->
+
+    <div class="container mt-3 mb-3">
+
+    <h3 class="pt-2 ">Notizbuch</h3>
+
+    </div>
+
+    <div class="container  z-depth-1 mt-3 mb-3">
+
+        <div class="row pt-0 pl-1 pd-1 pb-3">
+
+            <div class="col-10 text-left mt-3">
+
+                <button class="btn btn-sm btn-indigo font-weight-bold" id="previous2"><i
+                        class="fas fa-chevron-left"></i></button>
+
+                <button value="1" class="btn btn-sm pagingSlot2 font-weight-bold" id="1">1</button>
+                <button value="2" class="btn btn-sm pagingSlot2 font-weight-bold" id="2">2</button>
+                <button value="3" class="btn btn-sm pagingSlot2 font-weight-bold" id="3">3</button>
+                <!-- 
+                <button value="4" class="btn btn-sm pagingSlot2 font-weight-bold" id="4">4</button>
+                <button value="5" class="btn btn-sm pagingSlot2 font-weight-bold" id="5">5</button>
+                <button value="6" class="btn btn-sm pagingSlot2 font-weight-bold" id="6">6</button>
+                <button value="7" class="btn btn-sm pagingSlot2 font-weight-bold" id="7">7</button>
+                <button value="8" class="btn btn-sm pagingSlot2 font-weight-bold" id="8">8</button>
+                <button value="9" class="btn btn-sm pagingSlot2 font-weight-bold" id="9">9</button>
+                <button value="10" class="btn btn-sm pagingSlot2 font-weight-bold" id="10">10</button>
+                -->
+
+                <button class="btn btn-sm btn-indigo font-weight-bold" id="next2"><i
+                        class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="col-2 mt-3">
+                <div class="md-form m-0 p-0">
+                    <input type="text" id="textvalue" class="form-control">
+                    <label for="textvalue">Titel</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="row pt-0 pl-1 pd-1 pb-0">
+
+            <div class="col-12 text-left">
+
+                
+                <button class="btn btn-sm font-weight-bold btn-indigo" id="previous"><i
+                    class="fas fa-chevron-left"></i></button>
+
+                <button value="1" class="btn btn-sm pagingSlot btn-light font-weight-bold" id="1">1</button>
+                <button value="2" class="btn btn-sm pagingSlot btn-light font-weight-bold" id="2">2</button>
+                <button value="3" class="btn btn-sm pagingSlot btn-light font-weight-bold" id="3">3</button>
+                <button value="4" class="btn btn-sm pagingSlot btn-light font-weight-bold" id="4">4</button>
+                <button value="5" class="btn btn-sm pagingSlot btn-light font-weight-bold" id="5">5</button>
+                <button value="6" class="btn btn-sm pagingSlot btn-light font-weight-bold" id="6">6</button>
+                <button value="7" class="btn btn-sm pagingSlot btn-light font-weight-bold" id="7">7</button>
+                <button value="8" class="btn btn-sm pagingSlot btn-light font-weight-bold" id="8">8</button>
+                <button value="9" class="btn btn-sm pagingSlot btn-light font-weight-bold" id="9">9</button>
+                <button value="10" class="btn btn-sm pagingSlot btn-light font-weight-bold" id="10">10</button>
+        
+                <button class="btn btn-sm font-weight-bold btn-indigo" id="next"><i
+                    class="fas fa-chevron-right"></i></button>
+
+        </div>
+    </div>
+
+    <div class="container text-left">
+        <div class="md-form">
+            <i class="fas fa-pencil-alt prefix"></i>
+            <textarea id="textvalue2" class="md-textarea form-control" rows="8"></textarea>
+            <label for="textvalue2">Text</label>
+          </div>
+
+        <!-- <textarea class="mt-5 mb-3" style="resize:none" id="textvalue2" cols="26" rows="9"></textarea> -->
+
+        <br  />
+
+        <button class="btn btn-success mb-4" id="Download">Download Content</button>
+
+        <button class="btn btn-indigo mb-4" id="import">Import</button>
+
+        <input type="file" id="selectFiles" value="Import" />
+
+        <button class="btn btn-danger mb-4" id="Clear">Clear</button>
+
+    </div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Your custom scripts (optional) -->
+    <script type="text/javascript"></script>
+    <script src="js/script.js">
+    </script>
+</body>
+</html>
